@@ -1,5 +1,5 @@
 <p align="center">
-<img style="display: block;margin-left: auto;margin-right: auto;" src="./docs/logo.png" width="148" height="120" alt="Claude Notifications logo">
+<img style="display: block;margin-left: auto;margin-right: auto;" src="./docs/cc-notifications.png" width="400" height="98" alt="Claude Notifications logo">
 </p>
 
 # Claude Notifications
@@ -7,8 +7,6 @@
 Focus-aware macOS notifications for [Claude Code](https://claude.com/claude-code): suppresses when you're already looking at the session's terminal, dedupes across parallel sessions, and shows turn duration on Stop ("Wrangled for 3m 5s").
 
 Claude Code ships without default `Notification`/`Stop` hooks — you wire in whatever you want. This repo is what I wire in on macOS. If you're on a different platform or want something a little different, the design is portable — see [Adapting to your setup](#adapting-to-your-setup).
-
-![Claude Code notification banner showing "Synthesized for 5m 5s" with a custom Claude icon](./docs/cc-notifications.png)
 
 ## Features
 

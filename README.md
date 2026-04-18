@@ -1,3 +1,7 @@
+<p align="center">
+<img style="display: block;margin-left: auto;margin-right: auto;" src="./docs/logo.png" width="148" height="120" alt="Claude Notifications logo">
+</p>
+
 # Claude Notifications
 
 Focus-aware macOS notifications for [Claude Code](https://claude.com/claude-code): suppresses when you're already looking at the session's terminal, dedupes across parallel sessions, and shows turn duration on Stop ("Wrangled for 3m 5s").

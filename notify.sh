@@ -69,8 +69,15 @@ random_stop_verb() {
 }
 
 # Escape for an osascript double-quoted string literal (fallback notifier path).
+# Backslashes and quotes get escaped; literal newlines become the two-char \n
+# escape so a multi-line .message doesn't break the osascript -e expression.
 osa_escape() {
-    printf '%s' "$1" | sed 's/\\/\\\\/g; s/"/\\"/g'
+    local s=$1
+    s=${s//\\/\\\\}
+    s=${s//\"/\\\"}
+    s=${s//$'\n'/\\n}
+    s=${s//$'\r'/\\r}
+    printf '%s' "$s"
 }
 
 # ------------------------------------------------------------------------------

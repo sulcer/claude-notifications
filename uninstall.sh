@@ -27,7 +27,7 @@ trap 'rm -f "$tmp"' EXIT
 # Remove any hook entry whose inner hooks reference ~/.claude/notify.sh.
 # If an event's array empties out, drop the event key too.
 jq '
-	def is_ours($h): ($h.command // "") | test("(^|[^[:alnum:]])~/\\.claude/notify\\.sh([[:space:]]|$)");
+	def is_ours($h): ($h.command // "") | test("(^|[[:space:]])(~|\\$HOME|\\$\\{HOME\\}|/[^[:space:]]+)/\\.claude/notify\\.sh([[:space:]]|$)");
 	.hooks = (
 		(.hooks // {})
 		| to_entries

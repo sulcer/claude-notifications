@@ -1,0 +1,6 @@
+*.app
+.DS_Store
+build/
+*.icloud
+*.log
+.idea/

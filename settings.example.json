@@ -1,0 +1,35 @@
+{
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/notify.sh '' /System/Library/Sounds/Glass.aiff"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/notify.sh '' /System/Library/Sounds/Hero.aiff"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/notify.sh --clear"
+          }
+        ]
+      }
+    ]
+  }
+}
